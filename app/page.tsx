@@ -1,6 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
 import { page_routes } from "@/lib/routes-config";
-import { MoveUpRightIcon, TerminalSquareIcon } from "lucide-react";
+import { MoveUpRightIcon } from "lucide-react";
 import Link from "next/link";
 import CopyableScript from "@/components/CopyableScript";
 
