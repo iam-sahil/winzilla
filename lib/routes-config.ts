@@ -45,6 +45,34 @@ export const ROUTES: EachRoute[] = [
       },
     ],
   },
+  {
+    title: "",
+    href: "",
+    noLink: true,
+  },
+  {
+    title: "",
+    href: "",
+    noLink: true,
+  },
+  {
+    title: "App Guides",
+    href: "/app-guides",
+    tag: "Important",
+    noLink: true,
+    items: [
+      { title: "Introduction", 
+        href: "/introduction" 
+      },
+      {
+        title: "Apps",
+        href: "/apps",
+        items: [
+          { title: "Discord", href: "/discord" },
+        ],
+      },
+    ],
+  },
 ];
 
 type Page = { title: string; href: string };

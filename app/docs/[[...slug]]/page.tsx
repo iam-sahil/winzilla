@@ -49,7 +49,7 @@ export async function generateMetadata(props: PageProps) {
   if (!res) return {};
   const { frontmatter } = res;
   return {
-    title: frontmatter.title,
+    title: "Winzilla - Documentation",
     description: frontmatter.description,
   };
 }

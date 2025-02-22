@@ -32,7 +32,7 @@ export default function Home() {
           Get Stared
         </Link>
         <Link
-          href={`/docs`}
+          href={`/guide`}
           className={buttonVariants({
             variant: "secondary",
             className: "px-6",
