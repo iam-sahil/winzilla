@@ -21,7 +21,7 @@ export const NAVLINKS = [
 
 export function Navbar() {
   return (
-    <nav className="w-full border-b h-16 sticky top-0 z-50 bg-background">
+    <nav className="w-full border-b h-16 sticky top-0 z-50 bg-background shadow-sm">
       <div className="sm:container mx-auto w-[95vw] h-full flex items-center justify-between md:gap-2">
         <div className="flex items-center gap-5">
           <SheetLeftbar />

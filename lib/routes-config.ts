@@ -69,6 +69,9 @@ export const ROUTES: EachRoute[] = [
         href: "/apps",
         items: [
           { title: "Discord", href: "/discord" },
+          { title: "Youtube Music", href: "/youtubeMusic" },
+          { title: "Hydra Launcher", href: "/hydraLauncher" },
+          { title: "Spotify", href: "/spotify" },
         ],
       },
     ],
