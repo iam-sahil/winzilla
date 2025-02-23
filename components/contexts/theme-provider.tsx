@@ -1,12 +1,14 @@
-// components/contexts/theme-provider.tsx
 "use client";
 
 import * as React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
-interface ThemeProviderProps extends React.PropsWithChildren {}
-
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+export function ThemeProvider({
+  children,
+  ...props
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <NextThemesProvider
       {...props}
