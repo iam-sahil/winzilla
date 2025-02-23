@@ -1,86 +1,124 @@
-.keyword {
-  color: #15803d;
-  /* Dark Green */
-}
+:root .keyword { color: #fbbf24; }           /* Candlelight Yellow */
+:root .function { color: #e879f9; }          /* Enchanted Magenta */
+:root .punctuation { color: #c9d1d9; }       /* GitHub Light Gray */
+:root .comment { color: #8b949e; }           /* GitHub Muted Gray */
+:root .string,
+:root .constant,
+:root .annotation,
+:root .boolean,
+:root .number { color: #f59e0b; }           /* Glowing Amber */
+:root .tag { color: #f472b6; }              /* Haunted Pink */
+:root .attr-value { color: #fb7185; }        /* Blood Moon Pink */
+:root .attr-name { color: #a3e635; }         /* Toxic Green */
 
-.function {
-   color: #0ea5e9;
-   /* Sky Blue */
-}
+/* --- Halloween Syntax --- */
+[data-theme="halloween"] .keyword { color: #ffb86c; }      /* Warm Orange */
+[data-theme="halloween"] .function { color: #bd93f9; }     /* Soft Purple */
+[data-theme="halloween"] .punctuation { color: #ff79c6; }  /* Vivid Pink */
+[data-theme="halloween"] .comment { color: #6272a4; }      /* Bluish Gray */
+[data-theme="halloween"] .string,
+[data-theme="halloween"] .constant,
+[data-theme="halloween"] .annotation,
+[data-theme="halloween"] .boolean,
+[data-theme="halloween"] .number { color: #8be9fd; }      /* Light Cyan */
+[data-theme="halloween"] .tag { color: #ff5555; }         /* Bold Red */
+[data-theme="halloween"] .attr-name { color: #50fa7b; }     /* Neon Green */
+[data-theme="halloween"] .attr-value { color: #f1fa8c; }    /* Pale Yellow */
 
-.punctuation {
-   color: #64748b;
-   /* Slate Gray */
-}
+/* --- Catppuccin Syntax --- */
+[data-theme="catppuccin"] .keyword { color: #c6a0f6; }     /* Mauve */
+[data-theme="catppuccin"] .function { color: #89dceb; }    /* Soft Sky Blue */
+[data-theme="catppuccin"] .punctuation { color: #939ab7; } /* Subtle Gray */
+[data-theme="catppuccin"] .comment { color: #6c7086; }     /* Muted Blue Gray */
+[data-theme="catppuccin"] .string,
+[data-theme="catppuccin"] .constant,
+[data-theme="catppuccin"] .annotation,
+[data-theme="catppuccin"] .boolean,
+[data-theme="catppuccin"] .number { color: #a6e3a1; }     /* Light Green */
+[data-theme="catppuccin"] .tag { color: #c6a0f6; }
+[data-theme="catppuccin"] .attr-name { color: #94e2d5; }    /* Teal */
+[data-theme="catppuccin"] .attr-value { color: #fab387; }   /* Peach */
 
-.comment {
-   color: #94a3b8;
-   /* Muted Slate Gray */
-}
+/* --- Gruvbox Dark Hard Syntax --- */
+[data-theme="gruvbox-hard"] .keyword { color: #fe8019; }
+[data-theme="gruvbox-hard"] .function { color: #83a598; }
+[data-theme="gruvbox-hard"] .punctuation { color: #928374; }
+[data-theme="gruvbox-hard"] .comment { color: #bdae93; }
+[data-theme="gruvbox-hard"] .string,
+[data-theme="gruvbox-hard"] .constant,
+[data-theme="gruvbox-hard"] .annotation,
+[data-theme="gruvbox-hard"] .boolean,
+[data-theme="gruvbox-hard"] .number { color: #b8bb26; }
+[data-theme="gruvbox-hard"] .tag { color: #fe8019; }
+[data-theme="gruvbox-hard"] .attr-name { color: #0d9488; }
+[data-theme="gruvbox-hard"] .attr-value { color: #059669; }
 
-.string,
-.constant,
-.annotation,
-.boolean,
-.number {
-   color: #16a34a;
-   /* Medium Green */
-}
+/* --- Tokyo Night Syntax --- */
+[data-theme="tokyo-night"] .keyword { color: #7aa2f7; }
+[data-theme="tokyo-night"] .function { color: #c792ea; }
+[data-theme="tokyo-night"] .punctuation { color: #7f849c; }
+[data-theme="tokyo-night"] .comment { color: #5c6370; }
+[data-theme="tokyo-night"] .string,
+[data-theme="tokyo-night"] .constant,
+[data-theme="tokyo-night"] .annotation,
+[data-theme="tokyo-night"] .boolean,
+[data-theme="tokyo-night"] .number { color: #c3e88d; }
+[data-theme="tokyo-night"] .tag { color: #f7768e; }
+[data-theme="tokyo-night"] .attr-name { color: #e0af68; }
+[data-theme="tokyo-night"] .attr-value { color: #7aa2f7; }
 
-.tag {
-   color: #15803d;
-   /* Dark Green */
-}
+/* --- Night Owl Syntax --- */
+[data-theme="night-owl"] .keyword { color: hsl(350, 100%, 67%); }
+[data-theme="night-owl"] .function { color: hsl(200, 100%, 77%); }
+[data-theme="night-owl"] .punctuation { color: hsl(220, 13%, 55%); }
+[data-theme="night-owl"] .comment { color: hsl(220, 13%, 55%); }
+[data-theme="night-owl"] .string,
+[data-theme="night-owl"] .constant,
+[data-theme="night-owl"] .annotation,
+[data-theme="night-owl"] .boolean,
+[data-theme="night-owl"] .number { color: hsl(45, 100%, 71%); }
+[data-theme="night-owl"] .tag { color: hsl(350, 100%, 67%); }
+[data-theme="night-owl"] .attr-name { color: hsl(270, 46%, 75%); }
+[data-theme="night-owl"] .attr-value { color: hsl(30, 100%, 63%); }
 
-.attr-name {
-   color: #0d9488;
-   /* Teal */
-}
+/* --- One Dark Syntax --- */
+[data-theme="one-dark"] .keyword { color: hsl(357, 70%, 65%); }
+[data-theme="one-dark"] .function { color: hsl(207, 82%, 66%); }
+[data-theme="one-dark"] .punctuation { color: hsl(210, 20%, 40%); }
+[data-theme="one-dark"] .comment { color: hsl(210, 20%, 40%); }
+[data-theme="one-dark"] .string,
+[data-theme="one-dark"] .constant,
+[data-theme="one-dark"] .annotation,
+[data-theme="one-dark"] .boolean,
+[data-theme="one-dark"] .number { color: hsl(39, 67%, 69%); }
+[data-theme="one-dark"] .tag { color: hsl(357, 70%, 65%); }
+[data-theme="one-dark"] .attr-name { color: hsl(286, 60%, 67%); }
+[data-theme="one-dark"] .attr-value { color: hsl(29, 54%, 61%); }
 
-.attr-value {
-   color: #059669;
-   /* Emerald Green */
-}
+/* --- Monokai Syntax --- */
+[data-theme="monokai"] .keyword { color: hsl(80, 76%, 53%); }
+[data-theme="monokai"] .function { color: hsl(190, 81%, 67%); }
+[data-theme="monokai"] .punctuation { color: hsl(50, 11%, 41%); }
+[data-theme="monokai"] .comment { color: hsl(50, 11%, 41%); }
+[data-theme="monokai"] .string,
+[data-theme="monokai"] .constant,
+[data-theme="monokai"] .annotation,
+[data-theme="monokai"] .boolean,
+[data-theme="monokai"] .number { color: hsl(54, 70%, 68%); }
+[data-theme="monokai"] .tag { color: hsl(80, 76%, 53%); }
+[data-theme="monokai"] .attr-name { color: hsl(180, 50%, 50%); }
+[data-theme="monokai"] .attr-value { color: hsl(32, 98%, 56%); }
 
-/* Dark Mode */
-.dark .keyword {
-  color: #fbbf24;
-  /* Candlelight Yellow */
-}
-
-.dark .function {
-  color: #e879f9;
-  /* Enchanted Magenta */
-}
-
-.dark .punctuation {
-  color: #c9d1d9; /* GitHub Light Gray */
-}
-
-.dark .comment {
-  color: #8b949e; /* GitHub Muted Gray */
-}
-
-.dark .string,
-.dark .constant,
-.dark .annotation,
-.dark .boolean,
-.dark .number {
-  color: #f59e0b;
-  /* Glowing Amber */
-}
-
-.dark .tag {
-  color: #f472b6;
-  /* Haunted Pink */
-}
-
-.dark .attr-name {
-  color: #a3e635;
-  /* Toxic Green */
-}
-
-.dark .attr-value {
-  color: #fb7185;
-  /* Blood Moon Pink */
-}
+/* --- Dracula Syntax --- */
+[data-theme="dracula"] .keyword { color: hsl(135, 94%, 65%); }
+[data-theme="dracula"] .function { color: hsl(191, 97%, 77%); }
+[data-theme="dracula"] .punctuation { color: hsl(225, 27%, 51%); }
+[data-theme="dracula"] .comment { color: hsl(225, 27%, 51%); }
+[data-theme="dracula"] .string,
+[data-theme="dracula"] .constant,
+[data-theme="dracula"] .annotation,
+[data-theme="dracula"] .boolean,
+[data-theme="dracula"] .number { color: hsl(65, 92%, 76%); }
+[data-theme="dracula"] .tag { color: hsl(135, 94%, 65%); }
+[data-theme="dracula"] .attr-name { color: hsl(265, 89%, 78%); }
+[data-theme="dracula"] .attr-value { color: hsl(31, 100%, 71%); }

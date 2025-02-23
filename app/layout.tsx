@@ -37,12 +37,7 @@ export default function RootLayout({
         className={`${sansFont.variable} ${monoFont.variable} font-regular antialiased tracking-wide`}
         suppressHydrationWarning
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider>
           <Navbar />
           <main className="sm:container mx-auto w-[90vw] h-auto scroll-smooth">
             {children}

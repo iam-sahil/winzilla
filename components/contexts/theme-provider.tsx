@@ -1,9 +1,20 @@
+// components/contexts/theme-provider.tsx
 "use client";
 
 import * as React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { type ThemeProviderProps } from "next-themes/dist/types";
+
+interface ThemeProviderProps extends React.PropsWithChildren {}
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+  return (
+    <NextThemesProvider
+      {...props}
+      attribute="data-theme"
+      defaultTheme="gruvbox-hard"
+      enableSystem={false}
+    >
+      {children}
+    </NextThemesProvider>
+  );
 }
