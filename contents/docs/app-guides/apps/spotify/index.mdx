@@ -10,21 +10,79 @@ description: With Spotify, it’s easy to find the right music or podcast for ev
 ## Installation
 
 <Stepper>
-  <StepperItem title="Step 1: Get the installer">
+  <StepperItem title="Get the installer [Official]">
     The Spotify installer can be found on
     [Spotify](https://www.spotify.com/de-en/download/).
   </StepperItem>
+  <StepperItem title="Get the installer [SpotX]">
+    The SpotX patcher used for patching the desktop version of Spotify installer
+    can be found on [Github](https://github.com/SpotX-Official/SpotX).
+    <Note type="note" title="About SpotX">
+      The script can be used to modify an existing spotify install but to avoid
+      version conflicts or unsupported Installation present it is best to
+      install spotify from it's official website or using the SpotX installer.
+    </Note>
+    This following powershell command can directly be used to install the necesarry and supported version of Spotify:
+
+```powershell:SpotX.ps1
+# Available on SpotX Github
+# Running this command invokes the install process for SpotX to install and patch spotify automatically
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/spotx-official.github.io/main/run.ps1') } -confirm_uninstall_ms_spoti -confirm_spoti_recomended_over -podcasts_off -block_update_on -start_spoti -new_theme -adsections_off -lyrics_stat spotify"
+```
+
+  </StepperItem>
   <StepperItem title="Step 2: Setup & Login">
-    Complete the setup process by running and following the youtube music
-    installer & Login using google to sync it to your youtube account and follow
+    If you used the SpotX install command then spotify should be install and ready to use else complete the setup process by running and following the spotify music
+    installer & Login to sync it to your spotify account and follow
     the app instructions.
   </StepperItem>
-  <StepperItem title="Step 3: To modify youtube music install">
-    The Youtube Music application includes built-in plugins and theming using
-    ambient albumn colors or using fixed CSS files.
+  <StepperItem title="Step 3: To apply plugins and theming">
+Spicetify is by-far the best method to customize your spotify install, it uses a plugin marketplace inside the spotify application to install plugins and themes directly. Install spicetify by navigating to [Spicetify](https://spicetify.app/docs/getting-started#installation).
+
+
+    This following powershell command can directly be used to install Spicetify:
+```powershell:Spicetify.ps1
+#Available on spicetify website
+irm https://raw.githubusercontent.com/spicetify/cli/main/install.ps1 | iex
+```
   </StepperItem>
 </Stepper>
 
+## Features
+
+- Blocks all banner, video and audio ads in the client
+- Hiding podcasts, episodes and audiobooks from the homepage (optional)
+- Block Spotify automatic updates (optional)
+- Disabled sentry's console log/error/warning messages to Spotify developers, halted user interaction logging, eliminated right-to-left CSS rules for simplification, and performed code minification
+
+## Extensions
+
+Spicetify allows us to import Javascript code to be executed along the main spotify code to interact with and enchance the functionality of the application. Extensions can be installed from the [Spicetify website](https://spicetify.app/docs/advanced-usage/extensions). The website includes a list for valid maintained extensions.
+Replace "file name" with the "extension_name".js without the quotation marks.
+```powershell:Spicetify_extensions.ps1
+spicetify config extensions "file name".js
+spicetify apply
+```
 ## Theming
 
-Direct install CSS files or theming for the application can be found on [Github](https://github.com/kerichdev/themes-for-ytmdesktop-player).
+We can apply themes using Spicetify through the marketplace or manually installing the theme files, spicetify uses CSS snippets to modify the web based UI of the spotify client. Themes can be installed from 
+[Spicetify Themes](https://github.com/spicetify/spicetify-themes), [Comfy](https://github.com/Comfy-Themes/Spicetify) and [Catppuccin Theme](https://github.com/catppuccin/spicetify).
+
+## Nuking / Deleting
+
+Uninstall spotify using control panel.
+
+<Note type="danger" title="Important">
+  To completely remove all spotify, spicetify and spotx config and their
+  leftover files you can consider using the script which strips out all known
+  install directories: [Nuke
+  Spotify](https://github.com/amd64fox/Uninstall-Spotify)
+</Note>
+
+## Support for SpotX & Spicetify
+Visit their respective github repositories for any further inquires.
+
+[SpotX Github](https://github.com/SpotX-Official/SpotX)
+
+
+[Spicetify Github](https://github.com/spicetify/cli)
