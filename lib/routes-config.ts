@@ -58,11 +58,17 @@ export const ROUTES: EachRoute[] = [
   {
     title: "App Guides",
     href: "/app-guides",
-    tag: "Important",
+    tag: "Essential",
     noLink: true,
     items: [
       { title: "Introduction", 
         href: "/introduction" 
+      },
+      { title: "Using Ninite", 
+        href: "/ninite" 
+      },
+      { title: "Using WinGet", 
+        href: "/winget" 
       },
       {
         title: "Apps",

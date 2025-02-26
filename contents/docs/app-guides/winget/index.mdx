@@ -1,0 +1,56 @@
+---
+title: WinGet
+description: WinGet is a command line tool enabling users to discover, install, upgrade, remove and configure applications on Windows 10, Windows 11, and Windows Server 2025 computers. This tool is the client interface to the Windows Package Manager service.
+---
+
+## Installation
+
+<Stepper>
+  <StepperItem title="Step 1: Installing WinGet">
+    Run the given powershell code as Administrator to install WinGet on your system. The command can be found on [learn.microsoft.com](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget-on-windows-sandbox).
+      ```powershell:winget.ps1 showLineNumbers {3-4}
+      $progressPreference = 'silentlyContinue'
+      Write-Host "Installing WinGet PowerShell module from PSGallery..."
+      Install-PackageProvider -Name NuGet -Force | Out-Null
+      Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
+      Write-Host "Using Repair-WinGetPackageManager cmdlet to bootstrap WinGet..."
+      Repair-WinGetPackageManager
+      Write-Host "Done."
+      ```
+  </StepperItem>
+  <StepperItem title="Step 2: Searching for a program using WinGet">
+  Check if a given program is installable through WinGet using the winget search "appname" command.
+  ```powershell:winget_search.ps1 showLineNumbers {1}
+  winget search <appname>
+  ```
+  </StepperItem>
+  <StepperItem title="Step 3: Installing a program using WinGet">
+    After you have confirmed that the tool you want is available, you can install the tool by typing winget install "appname". The WinGet tool will launch the installer and install the application on your PC.
+  ```powershell:winget_install.ps1 showLineNumbers {1}
+  winget install <appname>
+  ```
+  </StepperItem>
+</Stepper>
+
+## Winget Commands
+The current build of WinGet supports the following commands. Use <code>-?, --help</code> to get a complete list of all supported commands.
+| **Command**         | **Description**                                                                                        |
+| ------------------- | ------------------------------------------------------------------------------------------------------ |
+| info      | Displays metadata about the system (version numbers, architecture, log location, etc). Helpful for troubleshooting.                                                        |
+| install | 	Installs the specified application. |
+| show | Displays details for the specified application. |
+| source | Adds, removes, and updates the Windows Package Manager repositories accessed by the WinGet tool. |
+| search | Searches for an application. |
+| list | 	Display installed packages. |
+| upgrade | Upgrades the given package. |
+| uninstall | Uninstalls the given package. |
+| hash | Generates the SHA256 hash for the installer. |
+| download | Downloads the specified application's installer. |
+
+## Scripting
+To write scripts which install several programs, WinGet allows chaining packages to be installed using <code> winget install query1 query2 ...</code>
+```powershell:winget_example.ps1 showLineNumbers {1}
+winget install Microsoft.WindowsTerminal Microsoft.PowerToys Microsoft.VisualStudioCode
+```
+
+

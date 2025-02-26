@@ -39,7 +39,7 @@ export default function Home() {
             size: "lg",
           })}
         >
-          App Guides
+          Guides
         </Link>
       </div>
       <CopyableScript scriptText={"irm winzilla.vercel.app/win | iex"} />
