@@ -14,7 +14,7 @@ description: WinGet is a command line tool enabling users to discover, install, 
       Install-PackageProvider -Name NuGet -Force | Out-Null
       Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
       Write-Host "Using Repair-WinGetPackageManager cmdlet to bootstrap WinGet..."
-      Repair-WinGetPackageManager
+      Repair-WinGetPackageManager -AllUsers
       Write-Host "Done."
       ```
   </StepperItem>
@@ -50,7 +50,7 @@ The current build of WinGet supports the following commands. Use <code>-?, --hel
 ## Scripting
 To write scripts which install several programs, WinGet allows chaining packages to be installed using <code> winget install query1 query2 ...</code>
 ```powershell:winget_example.ps1 showLineNumbers {1}
-winget install Microsoft.WindowsTerminal Microsoft.PowerToys Microsoft.VisualStudioCode
+winget install Microsoft.DotNet.DesktopRuntime.8 FxSound.FxSound Microsoft.VisualStudioCode 7zip.7zip OpenJS.NodeJS Discord.Discord Microsoft.VCRedist.2015+.x86 Microsoft.VCRedist.2015+.x64 qBittorrent.qBittorrent RamenSoftware.Windhawk EpicGames.EpicGamesLauncher Greenshot.Greenshot Valve.Steam Git.Git voidtools.Everything VideoLAN.VLC Flow-Launcher.Flow-Launcher Python.Python.3.12
 ```
 
 
