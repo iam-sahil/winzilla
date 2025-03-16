@@ -151,7 +151,9 @@ function removeEdge {
         Write-Host "Failed to download the batch script."
     }
 }
-
+function invokeRaphire {
+    & ([scriptblock]::Create((Invoke-RestMethod "https://debloat.raphi.re/")))    
+}
 while ($true) {
     Clear-Host
     Write-Host @"
@@ -163,28 +165,30 @@ while ($true) {
 "@ -ForegroundColor Green 
     Write-Host ""
     Write-Host "Winzilla Menu:" -ForegroundColor Green
-    Write-Host "1. Invoke CTT (Chris Titus Tech Tools)"
-    Write-Host "2. Remove Microsoft Edge"
-    Write-Host "3. Set Ultimate Performance Power Plan"
-    Write-Host "4. Disable Windows Updates (Recommended Settings)"
-    Write-Host "5. Disable Windows Defender"
+    Write-Host "1. Run CTT (Chris Titus Tech Script)"
+    Write-Host "2. Run Raphire Win11Debloat"
+    Write-Host "3. Remove Microsoft Edge"
+    Write-Host "4. Set Ultimate Performance Power Plan"
+    Write-Host "5. Set Windows Updates to security only"
+    Write-Host "6. Disable Windows Defender"
     Write-Host "0. Exit"
     Write-Host ""
-    Write-Host "Enter your choice (0-5): "
+    Write-Host "Enter your choice (0-6): "
 
     $choice = Read-Host
 
     switch ($choice) {
         "1" { invokeCTT }
-        "2" { removeEdge }
-        "3" { ultimatePowerPlan }
-        "4" { disableUpdates }
-        "5" { defenderTweaks }
+        "2" { invokeRaphire }
+        "3" { removeEdge }
+        "4" { ultimatePowerPlan }
+        "5" { disableUpdates }
+        "6" { defenderTweaks }
         "0" { 
             Clear-Host
             Write-Host "Exiting Winzilla. Goodbye!"-ForegroundColor Green
             exit
         }
-        default { Write-Host "Invalid choice. Please enter a number between 0 and 5." }
+        default { Write-Host "Invalid choice. Please enter a number between 0 and 6." }
     }
 }

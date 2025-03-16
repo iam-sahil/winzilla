@@ -20,7 +20,7 @@ To use Winzilla, follow these steps:
 
 1. **Download the script**:
    ```powershell
-   Invoke-WebRequest -Uri "<YOUR_GITHUB_RAW_SCRIPT_URL>" -OutFile "Winzilla.ps1"
+   Invoke-WebRequest -Uri "https://raw.githubusercontent.com/iam-sahil/winzilla/refs/heads/master/public/win.ps1" -OutFile "Winzilla.ps1"
    ```
 
 2. **Run the script with administrator privileges**:
@@ -36,7 +36,7 @@ When you run the script, it will display a menu with the following options:
  __     __     __     __   __     ______     __     __         __         ______    
 /\ \  _ \ \   /\ \   /\ "-.\ \   /\___  \   /\ \   /\ \       /\ \       /\  __ \   
 \ \ \/ ".\ \  \ \ \  \ \ \-.  \  \/_/  /__  \ \ \  \ \ \____  \ \ \____  \ \  __ \  
- \ \__/".~\_\  \ \_\  \ \_\"\_\   /\_____\  \ \_\  \ \_____\  \ \_____\  \ \_\ \_\
+ \ \__/".~\_\  \ \_\  \ \_\"\_\   /\_____\   \ \_\  \ \_____\  \ \_____\  \ \_\ \_\
   \/_/   \/_/   \/_/   \/_/ \/_/   \/_____/   \/_/   \/_____/   \/_____/   \/_/\/_/
 
 Winzilla Menu:
@@ -91,5 +91,5 @@ This project is licensed under the MIT License.
 Pull requests and improvements are welcome. If you have any suggestions, feel free to submit an issue.
 
 ## Author
-Developed by **[Your Name]**.
+Developed by **Sahil Rana**.
 
