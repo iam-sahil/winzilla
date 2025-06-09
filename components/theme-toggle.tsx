@@ -1,7 +1,17 @@
 "use client";
 
 import * as React from "react";
-import { PaintbrushVertical } from "lucide-react";
+import {
+  PaintbrushVertical,
+  Moon,
+  Coffee,
+  Skull,
+  Star,
+  Zap,
+  Book,
+  Code,
+  Palette,
+} from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
@@ -24,32 +34,68 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+        <DropdownMenuItem
+          onClick={() => setTheme("dark")}
+          className="flex items-center gap-2"
+        >
+          <Moon className="h-4 w-4" />
+          <span>Dark</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("gruvbox-hard")}>
-          Gruvbox Hard
+        <DropdownMenuItem
+          onClick={() => setTheme("gruvbox-hard")}
+          className="flex items-center gap-2"
+        >
+          <Palette className="h-4 w-4 text-amber-600" />
+          <span>Gruvbox Hard</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("halloween")}>
-          Halloween
+        <DropdownMenuItem
+          onClick={() => setTheme("halloween")}
+          className="flex items-center gap-2"
+        >
+          <Skull className="h-4 w-4 text-orange-500" />
+          <span>Halloween</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("tokyo-night")}>
-          Tokyo Night
+        <DropdownMenuItem
+          onClick={() => setTheme("tokyo-night")}
+          className="flex items-center gap-2"
+        >
+          <Star className="h-4 w-4 text-purple-400" />
+          <span>Tokyo Night</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("catppuccin")}>
-          Catppuccin
+        <DropdownMenuItem
+          onClick={() => setTheme("catppuccin")}
+          className="flex items-center gap-2"
+        >
+          <Coffee className="h-4 w-4 text-purple-400" />
+          <span>Catppuccin</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("night-owl")}>
-          Night Owl
+        <DropdownMenuItem
+          onClick={() => setTheme("night-owl")}
+          className="flex items-center gap-2"
+        >
+          <Book className="h-4 w-4 text-blue-400" />
+          <span>Night Owl</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dracula")}>
-          Dracula
+        <DropdownMenuItem
+          onClick={() => setTheme("dracula")}
+          className="flex items-center gap-2"
+        >
+          <Zap className="h-4 w-4 text-purple-500" />
+          <span>Dracula</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("one-dark")}>
-          One Dark
+        <DropdownMenuItem
+          onClick={() => setTheme("one-dark")}
+          className="flex items-center gap-2"
+        >
+          <Code className="h-4 w-4 text-blue-400" />
+          <span>One Dark</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("monokai")}>
-          Monokai
+        <DropdownMenuItem
+          onClick={() => setTheme("monokai")}
+          className="flex items-center gap-2"
+        >
+          <Palette className="h-4 w-4 text-green-500" />
+          <span>Monokai</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

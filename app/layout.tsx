@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://winzilla.vercel.app/"),
   description:
     "Even a fresh windows install is ridiculed with inhouse spyware from Microsoft, not to mention the loads of background services bogging down your system.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
